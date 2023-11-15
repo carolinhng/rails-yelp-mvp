@@ -1,16 +1,28 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @restaurant.img_url %>);">
+  <div class="container_flex">
+    <h1><%= @restaurant.name %># Show</h1>
+    <p>Choose your restaurant !</p>
+  </div>
+</div>
+
 <div class="container_flex">
-  <h1> <%= @restaurant.name %># Show</h1>
-  <h4>Category : <%= @restaurant.category %> </h2>
-  <p>Address : <%= @restaurant.address %></p>
-  <p>Phone number : <%= @restaurant.phone_number %></p>
+  <div class="container_infos">
+    <h4>Category : <%= @restaurant.category %> </h2>
+    <p>Address : <%= @restaurant.address %></p>
+    <p>Phone number : <%= @restaurant.phone_number %></p>
+
+    <h4>Les avis</h2>
+    <ul>
+      <% @restaurant.reviews.each do | review | %>
+        <li>
+          <p>Note : <%= review.rating %> - <%= review.content %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+
 
   <button><%= link_to "Back", restaurants_path %></button>
   <button><%= link_to "Add a review", new_restaurant_review_path(@restaurant) %></button>
-  <ul>
-    <% @restaurant.reviews.each do | review | %>
-      <li>
-        <p><%= review.rating %> <%= review.content %></p>
-      </li>
-    <% end %>
-  </ul>
 </div>

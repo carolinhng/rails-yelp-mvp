@@ -6,11 +6,27 @@
 </div>
 
 <div class="container_flex">
-  <ul>
+
+  <div class="cards">
     <% @restaurants.each do |restaurant| %>
-      <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+      <%= link_to restaurant_path(restaurant) do %>
+        <%# <div class="cards"> %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= restaurant.img_url %>)">
+            <%= restaurant.name %>
+          </div>
+        <%# </div> %>
+      <% end %>
     <% end %>
-  </ul>
-  <button><%= link_to "Add a new restaurant", new_restaurant_path %></button>
+  </div>
+
+  <div>
+    <button>
+      <%= link_to new_restaurant_path do %>
+        <i class="fa-solid fa-square-plus" style="color: #000000;"></i>
+        Add a restaurant
+      <% end %>
+    </button>
+  </div>
+
 
 </div>

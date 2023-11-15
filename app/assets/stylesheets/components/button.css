@@ -1,0 +1,32 @@
+button a{
+  text-decoration: none;
+  color: white;
+}
+
+button a :hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.fa-solid {
+  color: white;
+}
+
+button {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0px;
+  margin: 10px 0px;
+}
+
+button:hover {
+  background-color: rgb(184, 184, 184);
+}
