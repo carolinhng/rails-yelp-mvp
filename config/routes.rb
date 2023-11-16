@@ -18,6 +18,5 @@ Rails.application.routes.draw do
   # post "/restaurants", to: "restaurants#create"
 
   # get "/restaurants/restaurant_id/reviews/new", to: "reviews#new", as: :new_restaurant_review
-  # # get "/restautants/restaurant_id/", to: "reviews#show", as: :restaurant_reviews
   # post "/restaurants/restaurant_id/reviews", to: "reviews#create"
 end
